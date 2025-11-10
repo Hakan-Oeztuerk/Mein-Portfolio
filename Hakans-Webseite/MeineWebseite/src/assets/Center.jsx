@@ -6,10 +6,10 @@ function Center({ children }) {
             textAlign: 'top',
             width: '100vw',
             marginLeft: '80px',
-            color: 'black',
+            color: 'white',
             borderRadius: '12px',
-            backgroundColor: '#ffaa00',
-            border: '2px solid white',
+            backgroundColor: 'transparent',
+            border: '2px solid rgba(255,255,255,0.12)',
             paddingLeft: '32px',
         }} >
             {children}
