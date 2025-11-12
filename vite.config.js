@@ -13,8 +13,8 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react(), tailwindcss(),
     
-      // ngrok({
-      //   authtoken: env.NGROK_AUTH_TOKEN      })
+      ngrok({
+        authtoken: env.NGROK_AUTH_TOKEN      })
     ],
     server: {
       allowedHosts: ['.ngrok-free.app'],
