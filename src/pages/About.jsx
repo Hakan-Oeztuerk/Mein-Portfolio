@@ -1,4 +1,4 @@
-
+import Profil from './assets/Profil.jpg';
 export default function About() {
 
     return (

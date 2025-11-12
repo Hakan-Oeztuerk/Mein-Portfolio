@@ -1,6 +1,6 @@
 
-import video from './public/Video.mp4';
-import Profil from './public/Profil.jpg';
+import video from './assets/Video.mp4';
+
 
 export default function HeroWithVideo() {
     return (
