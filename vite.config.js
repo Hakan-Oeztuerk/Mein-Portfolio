@@ -1,5 +1,3 @@
-
-// vite.config.js
 import { defineConfig, loadEnv } from 'vite'
 import { ngrok } from 'vite-plugin-ngrok'
 import process from 'node:process'
