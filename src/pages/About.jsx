@@ -1,5 +1,5 @@
 import Profil from '../assets/Profil.jpg';
-import Navbar from '../components/Navbar.jsx';
+import Navbar from '../components/navbar.jsx';
 import Video from '../assets/Video.mp4';
 
 export default function About() {
