@@ -20,7 +20,7 @@ export default function About() {
 
                 <div className="relative z-1 ml-40 mt-20 h-full text-white p-4">
 
-                    <h1 className="text-4xl md:text-xl font-bold mb-8">
+                    <h1 className="text-5xl  font-bold mb-8">
                         Willkommen auf meiner Webseite!
                     </h1>
                
