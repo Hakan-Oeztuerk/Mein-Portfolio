@@ -1,0 +1,29 @@
+{
+  "coreSkills": [
+    { "name": "UI/UX Design", "icon": "Palette" },
+    { "name": "Wireframing", "icon": "Grid" },
+    { "name": "Prototyping", "icon": "Workflow" },
+    { "name": "User Flows", "icon": "GitBranch" },
+    { "name": "Responsive Design", "icon": "Smartphone" },
+    { "name": "HTML5", "icon": "Code" },
+    { "name": "CSS3", "icon": "Braces" },
+    { "name": "JavaScript", "icon": "FileCode" },
+    { "name": "React", "icon": "Atom" }
+  ],
+
+  "toolsDaily": [
+    { "name": "Figma", "icon": "Figma" },
+    { "name": "Framer", "icon": "Frame" },
+    { "name": "Git", "icon": "GitBranch" },
+    { "name": "GitHub", "icon": "Github" },
+    { "name": "VS Code", "icon": "Code2" },
+    { "name": "Vercel", "icon": "Cloud" }
+  ],
+
+  "currentlyLearning": [
+    { "name": "TypeScript", "icon": "FileType2" },
+    { "name": "Tailwind CSS", "icon": "Wind" },
+    { "name": "API-Integration", "icon": "PlugZap" },
+    { "name": "Backend Basics", "icon": "Server" }
+  ]
+}
