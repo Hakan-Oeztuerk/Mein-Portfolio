@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from './components/Navbar.jsx';
-import About from './pages/About.jsx';
+import Navbar from './components/navbar.jsx';
+import About from './pages/about.jsx';
 import Project from './pages/Project.jsx';
 import Contact from './pages/Contact.jsx';
 import Footer from './components/Footer.jsx';
@@ -14,6 +14,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/project" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
+        
       </Routes>
 
       <Footer />

@@ -55,7 +55,7 @@ export default function ContactForm() {
                         {...register("username")}
                         className={`border p-3 mt-1 rounded-xl w-full focus:border-cyan-600 outline-none ${errors.username ? "border-red-500 animate-pulse" : ""
                             }`}
-                        placeholder="z. B. Max123"
+                        placeholder=""
                     />
                     {errors.username && (
                         <p className="text-red-600 text-sm mt-1">{errors.username.message}</p>
@@ -69,7 +69,7 @@ export default function ContactForm() {
                         {...register("email")}
                         className={`border p-3 mt-1 rounded-xl w-full focus:border-cyan-600 outline-none ${errors.email ? "border-red-500 animate-pulse" : ""
                             }`}
-                        placeholder="z. B. max@mail.de"
+                        placeholder=""
                     />
                     {errors.email && (
                         <p className="text-red-600 text-sm mt-1">{errors.email.message}</p>
@@ -82,7 +82,7 @@ export default function ContactForm() {
                         {...register("phone")}
                         className={`border p-3 mt-1 rounded-xl w-full focus:border-cyan-600 outline-none ${errors.phone ? "border-red-500 animate-pulse" : ""
                             }`}
-                        placeholder="z. B. +49 123 456789"
+                        placeholder=""
                     />
                     {errors.phone && (
                         <p className="text-red-600 text-sm mt-1">{errors.phone.message}</p>

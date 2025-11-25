@@ -11,7 +11,7 @@ export default function Navbar() {
             <ul className="flex justify-center items-center space-x-8 ml-auto mr-40 text-lg">
                 <li>
                     <Link to="/about" className="hover:text-cyan-400">
-                        About Me
+                        Über mich
                     </Link>
                 </li>
                 <li>
@@ -25,8 +25,8 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/lebnslauf" className="hover:text-cyan-400">
-                        Lebenslauf
+                    <Link to="/zertifikat" className="hover:text-cyan-400">
+                        Zerifikat
                     </Link>
                 </li>
                  <DarkModeToggle />
