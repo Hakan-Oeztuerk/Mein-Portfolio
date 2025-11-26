@@ -29,7 +29,7 @@ export default function ContactForm() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="max-w-lg mx-auto p-8 outline mt-30 shadow-xl rounded-2xl relative"
+            className="max-w-lg mx-auto p-8 outline outline-cyan-400 mt-30 shadow-xl rounded-2xl relative"
         >
             <h1 className="text-3xl font-bold text-center mb-6">Kontakt</h1>
 
