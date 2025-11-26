@@ -1,8 +1,26 @@
 
 @import "tailwindcss";
 
-body {
+:root {
+    color-scheme: light dark;
+}
+
+html {
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
+html.dark {
     background-color: #212121;
-    color: #ffffff;
-    font-family: 'Nunito', sans-serif;
+    color: white;
+}
+
+html.light {
+    background-color: white;
+    color: black;
+}
+
+body {
+
+ font-family: 'Nunito', sans-serif;
 }
