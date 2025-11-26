@@ -4,7 +4,7 @@ import TCCaseStudy from "../assets/TC-CaseStudy.png";
 
 export default function ProjectCard() {
   return (
-    <div className="outline outline-cyan-400 p-6 rounded-2xl shadow-xl w-full max-w-3xl">
+    <div className="outline  p-6 rounded-2xl shadow-xl w-full max-w-3xl">
 
       <h2 className="text-4xl font-extrabold text-white mb-2">
         Projekte, die funktionieren.

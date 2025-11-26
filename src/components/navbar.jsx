@@ -25,7 +25,7 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/zertifikat" className="hover:text-cyan-400">
+                    <Link to="/Lebenslauf" className="hover:text-cyan-400">
                         Zerifikat
                     </Link>
                 </li>

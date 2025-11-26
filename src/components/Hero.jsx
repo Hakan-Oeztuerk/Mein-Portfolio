@@ -156,7 +156,7 @@ export default function Hero() {
                     </span>
                 </h1>
 
-                <p className="text-xl mb-6">
+                <p className="text-xl mb-6 ">
                     Von Wireframes bis interaktiven Weblösungen – hier verschmelzen Kreativität und Technik.
                 </p>
 

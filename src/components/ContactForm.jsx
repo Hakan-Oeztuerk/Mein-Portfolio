@@ -25,13 +25,16 @@ export default function ContactForm() {
     };
 
     return (
-        <motion.div
+        <>
+            <h1 className="text-3xl font-bold mb-3 ml-40">Lass uns digitale Lösungen schaffen.</h1>
+            <p className="ml-40 text-2xl">Schreib mir oder lass uns gemeinsam Ideen entwickeln, ich freue mich auf spannende Projekte.</p>
+            <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="max-w-lg mx-auto p-8 outline outline-cyan-400 mt-30 shadow-xl rounded-2xl relative"
+            className="max-w-lg mx-auto p-8 outline mt-10 shadow-xl rounded-2xl relative"
         >
-            <h1 className="text-3xl font-bold text-center mb-6">Kontakt</h1>
+            <h2 className="text-2xl font-semibold text-center mb-6">Kontakt</h2>
 
             <AnimatePresence>
                 {showSuccess && (
@@ -109,13 +112,14 @@ export default function ContactForm() {
                     type="submit"
                     disabled={!isValid}
                     whileTap={{ scale: 0.95 }}
-                    className={`p-3 rounded-xl text-black text-lg shadow-md transition ${isValid ? "bg-cyan-400 hover:bg-cyan-900" : "bg-gray-400 cursor-not-allowed"
+                    className={`p-3 rounded-xl text-black text-lg shadow-md transition ${isValid ? "bg-cyan-700 hover:bg-cyan-400" : "bg-gray-400 cursor-not-allowed"
                         }`}
                 >
                     Abschicken
                 </motion.button>
             </form>
         </motion.div>
+        </>
     );
 }
 

@@ -1,14 +1,15 @@
-const age = 16 + 2;
-const isInGermany = true
+const temperaturen = [10, 25, 5, 30, -2];
 
-const canDrinkBeer = (age >= 18 || isInGermany);
+for (let i = 0; i < temperaturen.length; i++) {
+  const temp = temperaturen[i];
 
-console.log(canDrinkBeer);
-
-
-const user = {name: "Hakan Öztürk", age: 18, isInGermany: true};
-const username = (user.name);
-console.log(username)
-
-
-
+  if (temp >= 25) {
+    console.log("Es ist heiß");
+  } else if (temp >= 10 && temp < 25) {
+    console.log("Es ist warm");
+  } else if (temp >= 0 && temp < 10) {
+    console.log("Es ist kühl");
+  } else {
+    console.log("Es ist sehr kalt");
+  }
+}
