@@ -6,10 +6,14 @@ import Contact from './pages/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import Lebenslauf from './pages/Lebenslauf.jsx';
 
+
+
+
 export default function App() {
   return (
     <div>
       <Navbar />
+      
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="/about" element={<About />} />
