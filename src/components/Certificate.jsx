@@ -1,172 +1,140 @@
-
-import React, { useState, useRef } from "react";
-
+import React, { useState } from "react";
 
 import ZertifikatImg from "../assets/Zertifikat.png";
 import ThemenImg from "../assets/Themen.png";
 import Modul1Img from "../assets/Modulbescheinigung1.png";
 import Modul2Img from "../assets/Modulbecheinigung2.png";
 
-
 export default function Certificate() {
-    const [certificateData, setCertificateData] = useState({
+    const [data, setData] = useState({
         name: "Hakan Öztürk",
         course: "Web Development",
         module1: "Modul 1: Produktdesign & Entwicklung.",
         module2: "Modul 2: Einführung Software & Webentwicklung.",
     });
 
-    const certificateRef = useRef(null);
+    const images = [
+        { title: "Digital Product Designer", img: ZertifikatImg },
+        { title: "Themen", img: ThemenImg },
+        { title: data.module1, img: Modul1Img },
+        { title: data.module2, img: Modul2Img },
+    ];
 
-    const handleTextChange = (field, value) => {
-        setCertificateData(prev => ({
-            ...prev,
-            [field]: value
-        }));
-    };
+    const [active, setActive] = useState(null);
 
-    const handlePrint = () => {
-        window.print();
+    const handleChange = (key, value) => setData({ ...data, [key]: value });
+
+    const next = () => setActive((active + 1) % images.length);
+    const prev = () => setActive((active - 1 + images.length) % images.length);
+
+    const download = (src) => {
+        const a = document.createElement("a");
+        a.href = src;
+        a.download = "Dokument.pdf";
+        a.click();
     };
 
     return (
-        <div className="bg-linear-to-br p-8">
-            <div className="max-w-6xl mx-auto">
-                <h1 className="text-4xl font-bold text-white mb-3 mt-10">Mein Weg in Design & Code.</h1>
-                    <p className="mb-10 text-2xl">Ausbildung und Zertifikate, alles was mich als Digital Product Designer & Webentwickler ausmacht.</p>
+        <div className="p-8">
+            <div className="max-w-6xl mx-auto text-white">
+                <h1 className="text-4xl font-bold mb-3 mt-10">Mein Weg in Design & Code.</h1>
+                <p className="mb-10 text-2xl">Ausbildung und Zertifikate.</p>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div className="bg-[#212121] border-2 p-6 rounded-lg space-y-4">
+                        <h2 className="text-2xl font-bold mb-6">Bearbeitung</h2>
 
-
-                    <div className="lg:col-span-1">
-                        <div className="bg-[#212121] border-2 p-6 rounded-lg space-y-4">
-                            <h2 className="text-2xl font-bold text-white mb-6">Bearbeitung</h2>
-
-
-                            <div>
-                                <label className="block text-white text-sm font-semibold mb-2">Name:</label>
+                        {Object.keys(data).map((key) => (
+                            <div key={key}>
+                                <label className="block text-sm font-semibold mb-2">{key}:</label>
                                 <input
-                                    type="text"
-                                    value={certificateData.name}
-                                    onChange={(e) => handleTextChange('name', e.target.value)}
-                                    className="w-full bg-gray-700 text-white p-2 rounded text-sm"
+                                    className="w-full bg-gray-700 p-2 rounded text-sm"
+                                    value={data[key]}
+                                    onChange={(e) => handleChange(key, e.target.value)}
                                 />
                             </div>
+                        ))}
 
-
-                            <div>
-                                <label className="block text-white text-sm font-semibold mb-2">Kurs:</label>
-                                <input
-                                    type="text"
-                                    value={certificateData.course}
-                                    onChange={(e) => handleTextChange('course', e.target.value)}
-                                    className="w-full bg-gray-700 text-white p-2 rounded text-sm"
-                                />
-                            </div>
-
-
-                            <div>
-                                <label className="block text-white text-sm font-semibold mb-2">Modul 1:</label>
-                                <input
-                                    type="text"
-                                    value={certificateData.module1}
-                                    onChange={(e) => handleTextChange('module1', e.target.value)}
-                                    className="w-full bg-gray-700 text-white p-2 rounded text-sm"
-                                />
-                            </div>
-
-
-                            <div>
-                                <label className="block text-white text-sm font-semibold mb-2">Modul 2:</label>
-                                <input
-                                    type="text"
-                                    value={certificateData.module2}
-                                    onChange={(e) => handleTextChange('module2', e.target.value)}
-                                    className="w-full bg-gray-700 text-white p-2 rounded text-sm"
-                                />
-                            </div>
-
-                            <button
-                                onClick={handlePrint}
-                                className="w-full mt-6 bg-cyan-700 hover:bg-cyan-400 text-white font-bold py-2 px-4 rounded"
-                            >
-                                🖨️ Drucken
-                            </button>
-                        </div>
+                        <button
+                            onClick={() => window.print()}
+                            className="w-full mt-6 bg-cyan-700 hover:bg-cyan-400 text-white font-bold py-2 px-4 rounded"
+                        >
+                            🖨️ Drucken
+                        </button>
                     </div>
 
-
-                    <div className="lg:col-span-2">
-                        <div
-                            ref={certificateRef}
-                            className=" text-white p-12 rounded-lg shadow-2xl border-2 print:shadow-none print:rounded-none"
-                        >
-
-                            <h2 className="text-6xl font-bold mt-3 text-white">ZERTIFIKAT</h2>
-
-                            <div className="border-gray-300 ">
-                                <h4 className="text-2xl font-bold mb-6">Zertifikate & Modulbescheinigungen:</h4>
-
-                                <div className="space-y-8">
-
-                                    <div>
-                                        <h5 className="text-xl font-bold mb-2">Digital Product Designer</h5>
-                                        <img
-                                            src={ZertifikatImg}
-                                            alt="Hauptzertifikat"
-                                            className="w-full max-w-lg rounded shadow border-2"
-                                        />
-                                    </div>
-
-                                    <div>
-                                        <h5 className="text-xl font-bold mb-2">Themen</h5>
-                                        <img
-                                            src={ThemenImg}
-                                            alt="Themen"
-                                            className="w-full max-w-lg rounded shadow border-2"
-                                        />
-                                    </div>
-
-
-                                    <div>
-                                        <h5 className="text-xl font-bold mb-2">{certificateData.module1}</h5>
-                                        <img
-                                            src={Modul1Img}
-                                            alt="Modul 1 Bescheinigung"
-                                            className="w-full max-w-lg rounded shadow border-2"
-                                        />
-                                    </div>
-
-                                    <div>
-                                        <h5 className="text-xl font-bold mb-2">{certificateData.module2}</h5>
-                                        <img
-                                            src={Modul2Img}
-                                            alt="Modul 2 Bescheinigung"
-                                            className="w-full max-w-lg rounded shadow border-2"
-                                        />
-                                    </div>
+                    <div className="lg:col-span-2 p-12 rounded-lg shadow-2xl border-2">
+                        <h2 className="text-6xl font-bold mb-10">ZERTIFIKAT</h2>
+                        <h3 className="text-3xl font-bold mb-4">Zertifikate</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                            {images.slice(0, 2).map((item, i) => (
+                                <div key={i} className="text-center">
+                                    <h5 className="text-xl font-bold mb-2">{item.title}</h5>
+                                    <img
+                                        src={item.img}
+                                        onClick={() => setActive(i)}
+                                        className="w-64 h-90 object-cover rounded shadow border-2 cursor-pointer hover:scale-105 transition mx-auto"
+                                    />
                                 </div>
-                            </div>
+                            ))}
+                        </div>
 
+                        <h3 className="text-3xl font-bold mb-4 mt-10">Modulbescheinigungen</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {images.slice(2).map((item, i) => (
+                                <div key={i + 2} className="text-center">
+                                    <h5 className="text-xl font-bold mb-2">{item.title}</h5>
+                                    <img
+                                        src={item.img}
+                                        onClick={() => setActive(i + 2)}
+                                        className="w-64 h-90 object-cover rounded shadow border-2 cursor-pointer hover:scale-105 transition mx-auto"
+                                    />
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
             </div>
 
+
+            {active !== null && (
+                <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
+                    <button
+                        onClick={() => setActive(null)}
+                        className="absolute top-5 right-5 text-white text-3xl"
+                    >
+                        ✖
+                    </button>
+
+                    <button onClick={prev} className="absolute left-10 text-white text-4xl">
+                        ❮
+                    </button>
+
+                    <div className="flex flex-col items-center">
+                        <img
+                            src={images[active].img}
+                            className="max-w-3xl max-h-[80vh] rounded shadow-lg border-4"
+                        />
+                        <button
+                            onClick={() => download(images[active].img)}
+                            className="mt-4 bg-cyan-600 hover:bg-cyan-400 text-white font-bold py-2 px-6 rounded"
+                        >
+                            📄 PDF Download
+                        </button>
+                    </div>
+
+                    <button onClick={next} className="absolute right-10 text-white text-4xl">
+                        ❯
+                    </button>
+                </div>
+            )}
+
             <style>{`
-                @media print {
-                    body {
-                        background-color: white;
-                    }
-                    .lg\\:col-span-1 {
-                        display: none;
-                    }
-                    .lg\\:col-span-2 {
-                        grid-column: span 3;
-                    }
-                }
-            `}</style>
+        @media print {
+          .lg\\:col-span-1 { display: none; }
+          .lg\\:col-span-2 { grid-column: span 3; }
+        }
+      `}</style>
         </div>
     );
 }
-
