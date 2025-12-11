@@ -15,7 +15,6 @@ export default function ProjectCard() {
         die intuitiv, klar und nutzerfreundlich gestaltet sind.
       </p>
 
-      {/* Drei Bilder unterhalb des <p> */}
       <div className="grid grid-cols-3 gap-4 mb-8">
         <a href="https://www.figma.com/design/S4eH8P5UO7O499dKjGezo1/Batch_001_Block_3_Name-Hakan-%C3%96zt%C3%BCrk-UX_Design_and_Produktentwicklung_c7c361b348?node-id=2003-60" target="_blank" rel="noopener noreferrer" className="block">
           <img src={TCProject} alt="TuningConnect" className="rounded-xl shadow-lg w-full" />
