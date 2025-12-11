@@ -1,103 +1,101 @@
 {
   "coreSkills": [
-    { 
-      "name": "UI/UX Design", 
+    {
+      "name": "UI/UX Design",
       "icon": "Palette",
       "description": "Gestaltung benutzerfreundlicher und visuell ansprechender Interfaces mit Fokus auf intuitive Bedienbarkeit."
     },
-    { 
-      "name": "Wireframing", 
+    {
+      "name": "Wireframing",
       "icon": "Grid",
       "description": "Strukturierung von Layouts und Funktionen in frühen Projektphasen, um klare visuelle Konzepte zu schaffen."
     },
-    { 
-      "name": "Prototyping", 
+    {
+      "name": "Prototyping",
       "icon": "Workflow",
       "description": "Erstellung interaktiver Prototypen, um Ideen testbar zu machen und Nutzerfeedback frühzeitig einzuholen."
     },
-    { 
-      "name": "User Flows", 
+    {
+      "name": "User Flows",
       "icon": "GitBranch",
       "description": "Planung logischer Nutzerwege zur Optimierung von Navigation, Effizienz und Benutzererlebnis."
     },
-    { 
-      "name": "Responsive Design", 
+    {
+      "name": "Responsive Design",
       "icon": "Smartphone",
       "description": "Entwicklung von Oberflächen, die sich nahtlos an verschiedene Geräte- und Bildschirmgrößen anpassen."
     },
-    { 
-      "name": "HTML5", 
+    {
+      "name": "HTML5",
       "icon": "Code",
       "description": "Strukturierung moderner Webinhalte mit semantischem, sauberem Markup."
     },
-    { 
-      "name": "CSS3", 
+    {
+      "name": "CSS3",
       "icon": "Braces",
       "description": "Styling und Layout moderner Websites inklusive Animationen und flexiblen Layoutsystemen."
     },
-    { 
-      "name": "JavaScript", 
+    {
+      "name": "JavaScript",
       "icon": "FileCode",
       "description": "Implementierung interaktiver Funktionen und dynamischer Inhalte für Webanwendungen."
     },
-    { 
-      "name": "React", 
+    {
+      "name": "React",
       "icon": "Atom",
       "description": "Entwicklung modularer, komponentenbasierter Frontend-Architekturen für performante Web-Apps."
     }
   ],
-
   "toolsDaily": [
-    { 
-      "name": "Figma", 
+    {
+      "name": "Figma",
       "icon": "Figma",
       "description": "Tägliches Haupttool für UI/UX-Design, Prototyping und kollaboratives Arbeiten."
     },
-    { 
-      "name": "Framer", 
+    {
+      "name": "Framer",
       "icon": "Frame",
       "description": "High-Fidelity-Prototyping und Erstellung interaktiver, animierter Designkonzepte."
     },
-    { 
-      "name": "Git", 
+    {
+      "name": "Git",
       "icon": "GitBranch",
       "description": "Versionskontrolle zur effizienten Zusammenarbeit und Sicherung des Entwicklungsfortschritts."
     },
-    { 
-      "name": "GitHub", 
+    {
+      "name": "GitHub",
       "icon": "Github",
       "description": "Hosting, Dokumentation und Verwaltung von Repositories sowie kollaborative Code-Reviews."
     },
-    { 
-      "name": "VS Code", 
+    {
+      "name": "VS Code",
       "icon": "Code2",
       "description": "Hauptentwicklungsumgebung für Frontend-Coding, Erweiterungen und Debugging."
     },
-    { 
-      "name": "Vercel", 
+    {
+      "name": "Vercel",
       "icon": "Cloud",
       "description": "Deployment moderner Webapps mit optimierten Build-Prozessen und schneller globaler Auslieferung."
     }
   ],
-
   "currentlyLearning": [
-    { 
-      "name": "TypeScript", 
+    {
+      "name": "TypeScript",
       "icon": "FileType2",
       "description": "Statisch typisiertes JavaScript für sichereren, skalierbaren und wartbaren Code."
     },
-    { 
-      "name": "Tailwind CSS", 
+    {
+      "name": "Tailwind CSS",
       "icon": "Wind",
       "description": "Utility-First-CSS-Framework für effizientes Styling und konsistente Designsysteme."
     },
-    { 
-      "name": "API-Integration", 
+    {
+      "name": "API-Integration",
       "icon": "PlugZap",
       "description": "Anbindung externer Datenquellen zur dynamischen Erweiterung von Webfunktionen."
     },
-    { 
-      "name": "Backend Basics", 
+    {
+      "name": "Backend Basics",
       "icon": "Server",
       "description": "Grundlagen serverseitiger Entwicklung wie Routing, Datenverarbeitung und einfache APIs."
     }

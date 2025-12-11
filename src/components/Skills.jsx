@@ -23,7 +23,6 @@ export default function SkillsPremium() {
                 <p className="text-white text-sm font-semibold">{item.name}</p>
               </div>
 
-              {/* Beschreibung anzeigen */}
               {item.description && (
                 <p className="text-gray-300 text-xs leading-relaxed">
                   {item.description}

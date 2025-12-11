@@ -4,7 +4,7 @@ import About from './pages/about.jsx';
 import Project from './pages/Project.jsx';
 import Contact from './pages/Contact.jsx';
 import Footer from './components/Footer.jsx';
-import Lebenslauf from './pages/Lebenslauf.jsx';
+import Lebenslauf from './pages/Certicate.jsx';
 
 
 

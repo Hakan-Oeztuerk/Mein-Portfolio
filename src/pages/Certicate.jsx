@@ -1,4 +1,4 @@
-import Certificate from "../components/Certificate.jsx";
+import Certificate from "../components/CertificateForm.jsx";
 
 export default function Lebenslauf() {
     return (

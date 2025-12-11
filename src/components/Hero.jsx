@@ -7,7 +7,7 @@ export default function Hero() {
     const areaRef = useRef(null);
     const canvasRef = useRef(null);
 
-  
+
     useEffect(() => {
         const words = [
             "Product-Design", "UX/UI", "Interaction",
@@ -32,7 +32,7 @@ export default function Hero() {
         return () => clearInterval(interval);
     }, []);
 
-  
+
     useEffect(() => {
         const area = areaRef.current;
         if (!area) return;
@@ -73,7 +73,7 @@ export default function Hero() {
     }, []);
 
 
-    
+
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d");
@@ -84,7 +84,7 @@ export default function Hero() {
         const stars = [];
         const shootingStars = [];
 
-    
+
         for (let i = 0; i < 200; i++) {
             stars.push({
                 x: Math.random() * canvas.width,
@@ -95,12 +95,12 @@ export default function Hero() {
         }
 
 
-     
+
 
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-          
+
             stars.forEach(s => {
                 ctx.fillStyle = `rgba(255,255,255,${s.opacity})`;
                 ctx.beginPath();
@@ -108,7 +108,7 @@ export default function Hero() {
                 ctx.fill();
             });
 
-          
+
             shootingStars.forEach((s, i) => {
                 ctx.strokeStyle = `rgba(255,255,255,${s.opacity})`;
                 ctx.lineWidth = 2;
@@ -134,20 +134,20 @@ export default function Hero() {
     return (
         <div className="relative w-full h-140 overflow-hidden">
 
-        
+
             <canvas
                 ref={canvasRef}
                 className="absolute top-0 left-0 w-full h-140 z-5 pointer-events-none"
             />
 
-          
+
             <video
-                className="absolute top-0 left-0 w-full h-140 object-cover z-0 brightness-12"
+                className="absolute top-0 left-0 w-full h-140 object-cover z-0 brightness-6"
                 src={Video}
                 muted autoPlay loop playsInline
             />
 
-          
+
             <div className="relative z-10 ml-40 text-white p-4 w-[720px]">
                 <h1 className="text-4xl font-bold leading-tight mb-2">
                     Design trifft Code –{" "}
@@ -172,7 +172,7 @@ export default function Hero() {
                 <p className="mt-2 text-lg">UX/UI Designer & Webentwickler.</p>
             </div>
 
-        
+
             <div
                 ref={areaRef}
                 className="absolute top-32 right-82 w-[800px] h-[580px] z-30 pointer-events-none"

@@ -6,7 +6,7 @@ export default function Project() {
     <div className="mt-20 flex flex-col items-center gap-10">
 
       <ProjectCard />
-      
+
     </div>
   );
 }

@@ -3,7 +3,7 @@ import DarkModeToggle from "./DarkModeToggle";
 export default function Navbar() {
     return (
         <nav className="bg-black border-gray-800 text-white p-4 flex items-center">
-           
+
             <div>
                 <h1 className="text-xl ml-40 font-bold text-cyan-400">HÖ</h1>
             </div>
@@ -29,9 +29,9 @@ export default function Navbar() {
                         Zerifikat
                     </Link>
                 </li>
-                 <DarkModeToggle />
+                <DarkModeToggle />
             </ul>
-           
+
         </nav >
     );
 }
