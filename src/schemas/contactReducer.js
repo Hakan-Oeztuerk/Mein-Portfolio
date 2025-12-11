@@ -1,21 +1,19 @@
-import { useState } from "react";
+export const initialState = {
+  showSuccess: false,
+};
 
-export default function withLoading(Component) {
-  return function WrappedComponent(props) {
-    const [loading, setLoading] = useState(false);
+export function contactReducer(state, action) {
+  switch (action.type) {
+    case "submitSuccess":
+      return { ...state, showSuccess: true };
 
-    const triggerLoading = async (action) => {
-      setLoading(true);
-      await action();
-      setLoading(false);
-    };
+    case "hideSuccess":
+      return { ...state, showSuccess: false };
 
-    return (
-      <Component
-        {...props}
-        loading={loading}
-        triggerLoading={triggerLoading}
-      />
-    );
-  };
+    case "resetForm":
+      return initialState;
+
+    default:
+      return state;
+  }
 }
