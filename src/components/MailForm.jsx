@@ -1,24 +1,21 @@
 import { useState } from "react";
 
-export default function AnmeldeFormular () {
+export default function Mail
+    () {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     function submitHandler(e) {
         e.preventDefault();
-
         const credentials = { email, password };
         console.log(credentials);
-
 
         const correctEmail = "hakan.oeztuerk82@gmail.com";
         const correctPassword = "123456";
 
         if (email === correctEmail && password === correctPassword) {
             setIsLoggedIn(true);
-
-
             setEmail("");
             setPassword("");
         } else {

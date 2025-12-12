@@ -1,27 +1,16 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { ThemeContext } from "../components/ThemeContext.jsx";
 
 export default function DarkModeToggle() {
-  const [dark, setDark] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return localStorage.getItem("theme") === "dark";
-  });
-
-  useEffect(() => {
-    if (dark) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [dark]);
+  const { state, dispatch } = useContext(ThemeContext);
 
   return (
     <button
-      onClick={() => setDark(!dark)}
+      onClick={() => dispatch({ type: "toggleTheme" })}
       className="p-2 rounded-lg text-black dark:text-white transition ml-4"
     >
-      {dark ? "🌙" : "☀️"}
+      {state.mode === "dark" ? "🌙" : "☀️"}
     </button>
   );
 }
+

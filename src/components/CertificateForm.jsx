@@ -63,7 +63,7 @@ export default function Certificate() {
                         </button>
                     </div>
 
-                    <div className="lg:col-span-2 p-12 rounded-lg shadow-2xl border-2">
+                    <div className="lg:col-span-2 p-12 bg-[#212121] rounded-lg shadow-2xl border-2">
                         <h2 className="text-6xl font-bold mb-10">ZERTIFIKAT</h2>
                         <h3 className="text-3xl font-bold mb-4">Zertifikate</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
