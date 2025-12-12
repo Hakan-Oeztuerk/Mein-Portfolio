@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function withLoading(Component) {
-  return function WrappedComponent(props) {
+  return function WrappedComponent({isLoading, ...props }) {
     const [loading, setLoading] = useState(false);
 
     const triggerLoading = async (action) => {
