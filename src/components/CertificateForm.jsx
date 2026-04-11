@@ -2,22 +2,23 @@ import React, { useState } from "react";
 
 import ZertifikatImg from "../assets/Zertifikat.png";
 import ThemenImg from "../assets/Themen.png";
-import Modul1Img from "../assets/Modulbescheinigung1.png";
-import Modul2Img from "../assets/Modulbecheinigung2.png";
+import KurszertifikatPreview from "../assets/Kurszertifikat_Hakan_Oeztuerk.png";
+import KurszertifikatPdf from "../assets/Kurszertifikat_Hakan_Oeztuerk.pdf";
 
 export default function Certificate() {
     const [data, setData] = useState({
         name: "Hakan Öztürk",
         course: "Web Development",
-        module1: "Modul 1: Produktdesign & Entwicklung.",
-        module2: "Modul 2: Einführung Software & Webentwicklung.",
     });
 
     const images = [
         { title: "Digital Product Designer", img: ZertifikatImg },
         { title: "Themen", img: ThemenImg },
-        { title: data.module1, img: Modul1Img },
-        { title: data.module2, img: Modul2Img },
+        {
+            title: "Kurszertifikat: Webentwicklung",
+            img: KurszertifikatPreview,
+            downloadSrc: KurszertifikatPdf
+        },
     ];
 
     const [active, setActive] = useState(null);
@@ -79,7 +80,7 @@ export default function Certificate() {
                             ))}
                         </div>
 
-                        <h3 className="text-3xl font-bold mb-4 mt-10">Modulbescheinigungen</h3>
+                        <h3 className="text-3xl font-bold mb-4 mt-10">Kurszertifikat</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {images.slice(2).map((item, i) => (
                                 <div key={i + 2} className="text-center">
@@ -116,7 +117,7 @@ export default function Certificate() {
                             className="max-w-3xl max-h-[80vh] rounded shadow-lg border-4"
                         />
                         <button
-                            onClick={() => download(images[active].img)}
+                            onClick={() => download(images[active].downloadSrc || images[active].img)}
                             className="mt-4 bg-cyan-600 hover:bg-cyan-400 text-white font-bold py-2 px-6 rounded"
                         >
                             📄 PDF Download

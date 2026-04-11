@@ -19,7 +19,7 @@ export default function Navbar() {
                     <Link to="/contact" className="hover:text-cyan-400">Kontakt</Link>
                 </li>
                 <li>
-                    <Link to="/Lebenslauf" className="hover:text-cyan-400">Zerifikat</Link>
+                    <Link to="/lebenslauf" className="hover:text-cyan-400">Zerifikat</Link>
                 </li>
                 <DarkModeToggle />
             </ul>

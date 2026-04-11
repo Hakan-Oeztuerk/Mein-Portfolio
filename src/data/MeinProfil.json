@@ -3,47 +3,47 @@
     {
       "name": "UI/UX Design",
       "icon": "Palette",
-      "description": "Gestaltung benutzerfreundlicher und visuell ansprechender Interfaces mit Fokus auf intuitive Bedienbarkeit."
+      "description": "UX/UI-Design in Figma und Framer inklusive UX-Research, Wireframes und nutzerzentrierter Gestaltung."
     },
     {
-      "name": "Wireframing",
+      "name": "Produktdesign in der IT",
       "icon": "Grid",
-      "description": "Strukturierung von Layouts und Funktionen in frühen Projektphasen, um klare visuelle Konzepte zu schaffen."
+      "description": "Planung und Umsetzung digitaler Produktideen von der Konzeption bis zur umsetzbaren Weblösung."
     },
     {
-      "name": "Prototyping",
-      "icon": "Workflow",
-      "description": "Erstellung interaktiver Prototypen, um Ideen testbar zu machen und Nutzerfeedback frühzeitig einzuholen."
-    },
-    {
-      "name": "User Flows",
-      "icon": "GitBranch",
-      "description": "Planung logischer Nutzerwege zur Optimierung von Navigation, Effizienz und Benutzererlebnis."
-    },
-    {
-      "name": "Responsive Design",
-      "icon": "Smartphone",
-      "description": "Entwicklung von Oberflächen, die sich nahtlos an verschiedene Geräte- und Bildschirmgrößen anpassen."
-    },
-    {
-      "name": "HTML5",
-      "icon": "Code",
-      "description": "Strukturierung moderner Webinhalte mit semantischem, sauberem Markup."
-    },
-    {
-      "name": "CSS3",
-      "icon": "Braces",
-      "description": "Styling und Layout moderner Websites inklusive Animationen und flexiblen Layoutsystemen."
-    },
-    {
-      "name": "JavaScript",
-      "icon": "FileCode",
-      "description": "Implementierung interaktiver Funktionen und dynamischer Inhalte für Webanwendungen."
-    },
-    {
-      "name": "React",
+      "name": "Frontend Entwicklung",
       "icon": "Atom",
-      "description": "Entwicklung modularer, komponentenbasierter Frontend-Architekturen für performante Web-Apps."
+      "description": "Aufbau moderner Frontends mit React, Tailwind und CSS Modules für performante Webanwendungen."
+    },
+    {
+      "name": "JavaScript & TypeScript",
+      "icon": "FileCode",
+      "description": "Sichere Entwicklung dynamischer Webanwendungen mit JavaScript und TypeScript."
+    },
+    {
+      "name": "Full-Stack Entwicklung",
+      "icon": "Server",
+      "description": "Umsetzung von Full-Stack-Projekten mit Next.js, Express, Prisma und PostgreSQL."
+    },
+    {
+      "name": "Datenbanken & Shell",
+      "icon": "Braces",
+      "description": "Praxis in SQL, Datenbankabfragen und Shell-Workflows für Entwicklung und Debugging."
+    },
+    {
+      "name": "Software-Architektur",
+      "icon": "GitBranch",
+      "description": "Arbeiten mit Schichtenarchitektur, MVC sowie Service- und Repository-Patterns."
+    },
+    {
+      "name": "Feature-orientiertes Design",
+      "icon": "Workflow",
+      "description": "Strukturierung von Anwendungen nach Features für bessere Wartbarkeit und Teamarbeit."
+    },
+    {
+      "name": "API & CMS Integration",
+      "icon": "PlugZap",
+      "description": "Integration von APIs, Strapi und Firebase zur Erweiterung von Webprojekten."
     }
   ],
   "toolsDaily": [
@@ -58,46 +58,51 @@
       "description": "High-Fidelity-Prototyping und Erstellung interaktiver, animierter Designkonzepte."
     },
     {
-      "name": "Git",
-      "icon": "GitBranch",
-      "description": "Versionskontrolle zur effizienten Zusammenarbeit und Sicherung des Entwicklungsfortschritts."
+      "name": "VS Code",
+      "icon": "Code2",
+      "description": "Zentrale Entwicklungsumgebung für Frontend-, Backend- und Full-Stack-Projekte."
     },
     {
       "name": "GitHub",
-      "icon": "Github",
-      "description": "Hosting, Dokumentation und Verwaltung von Repositories sowie kollaborative Code-Reviews."
-    },
-    {
-      "name": "VS Code",
-      "icon": "Code2",
-      "description": "Hauptentwicklungsumgebung für Frontend-Coding, Erweiterungen und Debugging."
+      "icon": "GitBranch",
+      "description": "Versionskontrolle, kollaborative Entwicklung und Basis für Deployment-Workflows."
     },
     {
       "name": "Vercel",
       "icon": "Cloud",
-      "description": "Deployment moderner Webapps mit optimierten Build-Prozessen und schneller globaler Auslieferung."
+      "description": "Deployment und Hosting moderner Webapps mit schneller globaler Auslieferung."
+    },
+    {
+      "name": "Docker Compose",
+      "icon": "Server",
+      "description": "Lokales Orchestrieren mehrerer Services für Entwicklung und Testing."
+    },
+    {
+      "name": "Neon & PostgreSQL",
+      "icon": "Braces",
+      "description": "Cloud-Datenbank und SQL-Workflows für skalierbare Full-Stack-Anwendungen."
     }
   ],
   "currentlyLearning": [
     {
-      "name": "TypeScript",
-      "icon": "FileType2",
-      "description": "Statisch typisiertes JavaScript für sichereren, skalierbaren und wartbaren Code."
-    },
-    {
-      "name": "Tailwind CSS",
-      "icon": "Wind",
-      "description": "Utility-First-CSS-Framework für effizientes Styling und konsistente Designsysteme."
-    },
-    {
-      "name": "API-Integration",
-      "icon": "PlugZap",
-      "description": "Anbindung externer Datenquellen zur dynamischen Erweiterung von Webfunktionen."
-    },
-    {
-      "name": "Backend Basics",
+      "name": "Next.js Vertiefung",
       "icon": "Server",
-      "description": "Grundlagen serverseitiger Entwicklung wie Routing, Datenverarbeitung und einfache APIs."
+      "description": "Vertiefung in Routing, Rendering-Strategien und Strukturierung produktiver Next.js-Projekte."
+    },
+    {
+      "name": "Express API Patterns",
+      "icon": "GitBranch",
+      "description": "Saubere API-Architektur mit Controllern, Services und Repository-Layern."
+    },
+    {
+      "name": "Prisma & SQL Performance",
+      "icon": "Braces",
+      "description": "Optimierung von Datenmodellen, Queries und Migrationsstrategien in Full-Stack-Projekten."
+    },
+    {
+      "name": "CI/CD Workflows",
+      "icon": "Cloud",
+      "description": "Automatisierung von Build-, Test- und Deployment-Prozessen mit GitHub und Vercel."
     }
   ]
 }
