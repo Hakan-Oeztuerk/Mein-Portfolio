@@ -1,26 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap");
 @import "tailwindcss";
-/* @plugin "daisyui"; */
 
 :root {
-    color-scheme: light dark;
+    color-scheme: dark;
+    --polo-bg: #000000;
+    --polo-surface: #070707;
+    --polo-soft: #101114;
+    --polo-border: rgba(255, 255, 255, 0.13);
+    --polo-text: #f3f5f8;
+    --polo-muted: rgba(230, 235, 243, 0.64);
+    --container-border: rgba(128, 176, 230, 0.5);
+    --container-start: #152d49;
+    --container-mid: #0d1f35;
+    --container-end: #07111f;
 }
 
-html {
-    background-color: white;
-    color: rgb(0, 0, 0);
+* {
+    box-sizing: border-box;
 }
 
-html.dark {
-    background-color: #212121;
-    color: white;
+html,
+body,
+#root {
+    min-height: 100%;
 }
 
-html.light {
-    background-color: white;
-    color: black;
+html,
+body {
+    margin: 0;
+    background: #202020;
+    color: var(--polo-text);
 }
 
 body {
+    font-family: "Inter", sans-serif;
+}
 
- font-family: 'Nunito', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.polo-page {
+    color: var(--polo-text);
+}
+
+.polo-container {
+    margin: 0 auto;
+    width: min(1320px, calc(100% - 2rem));
+}
+
+.polo-panel {
+    position: relative;
+    border: 1px solid var(--container-border);
+    background:
+        radial-gradient(120% 95% at 0% 0%, rgba(58, 112, 179, 0.26), transparent 56%),
+        linear-gradient(135deg, var(--container-start), var(--container-mid) 52%, var(--container-end));
+    border-radius: 32px;
+}
+
+.polo-panel-no-border {
+    border: none;
+}
+
+.polo-nav-shell {
+    border: 1px solid var(--container-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background:
+        radial-gradient(120% 95% at 0% 0%, rgba(58, 112, 179, 0.22), transparent 56%),
+        linear-gradient(135deg, #122842, #0c1b2f 52%, #07111f);
+    border-radius: 999px;
+}
+
+.polo-pill {
+    border: 1px solid var(--container-border);
+    border-radius: 999px;
+    background:
+        radial-gradient(140% 95% at 0% 0%, rgba(58, 112, 179, 0.2), transparent 58%),
+        linear-gradient(135deg, #11263f, #0b1a2d 55%, #070f1b);
+}
+
+.polo-chip {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.polo-btn-dark,
+.polo-btn-light {
+    border-radius: 16px;
+    padding: 0.76rem 1.35rem;
+    font-size: 1.03rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    transition: all 0.2s ease;
+}
+
+.polo-btn-dark {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.72);
+    color: #f6f8fb;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08) inset, 0 0 30px rgba(255, 255, 255, 0.07);
+}
+
+.polo-btn-dark:hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.46);
+}
+
+.polo-btn-light {
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    background: rgba(255, 255, 255, 0.08);
+    color: #f1f4f8;
+}
+
+.polo-btn-light:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.polo-muted {
+    color: var(--polo-muted);
+}
+
+.polo-card-shadow {
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        0 24px 54px rgba(0, 0, 0, 0.42);
+}
+
+.polo-grid-card {
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid var(--container-border);
+    background:
+        radial-gradient(130% 95% at 0% 0%, rgba(58, 112, 179, 0.2), transparent 58%),
+        linear-gradient(135deg, #11263f, #0a182a 55%, #060e19);
+}
+
+.polo-grid-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.7) contrast(0.92);
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.polo-grid-card:hover img {
+    transform: scale(1.03);
+    filter: saturate(1) contrast(1.02);
+}
+
+.polo-grid-card-contain img {
+    object-fit: contain;
+    padding: 0.35rem;
+    background: rgba(11, 20, 34, 0.95);
+}
+
+.polo-grid-card-contain:hover img {
+    transform: none;
+    filter: saturate(0.9) contrast(0.96);
+}
+
+.service-card {
+    border: 1px solid var(--container-border);
+    border-radius: 24px;
+    background:
+        radial-gradient(120% 95% at 0% 0%, rgba(58, 112, 179, 0.26), transparent 56%),
+        linear-gradient(135deg, var(--container-start), var(--container-mid) 52%, var(--container-end));
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(176, 214, 255, 0.52);
+}
+
+.resume-shell {
+    border: 1px solid var(--container-border);
+    border-radius: 30px;
+    background:
+        radial-gradient(120% 95% at 0% 0%, rgba(58, 112, 179, 0.22), transparent 56%),
+        linear-gradient(135deg, var(--container-start), var(--container-mid) 52%, var(--container-end));
+}
+
+.resume-card {
+    border: 1px solid var(--container-border);
+    border-radius: 24px;
+    background:
+        radial-gradient(140% 95% at 0% 0%, rgba(58, 112, 179, 0.24), transparent 58%),
+        linear-gradient(135deg, #122945, #0b1a2e 55%, #07101c);
+}
+
+.resume-entry {
+    position: relative;
+    border: 1px solid var(--container-border);
+    border-radius: 22px;
+    background:
+        radial-gradient(140% 95% at 0% 0%, rgba(58, 112, 179, 0.22), transparent 58%),
+        linear-gradient(135deg, #11273f, #0b1a2c 55%, #070f1a);
+}
+
+.resume-entry::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.58);
+}
+
+.portfolite-smoke {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    opacity: 0.52;
+    background:
+        radial-gradient(40% 45% at 8% 48%, rgba(255, 255, 255, 0.24), transparent 68%),
+        radial-gradient(34% 42% at 83% 75%, rgba(255, 255, 255, 0.16), transparent 72%),
+        radial-gradient(36% 46% at 52% 90%, rgba(255, 255, 255, 0.12), transparent 75%);
+    filter: blur(18px);
+}
+
+.polo-float {
+    animation: polo-float 7s ease-in-out infinite;
+}
+
+@keyframes polo-float {
+    0%,
+    100% {
+        transform: translateY(0px) rotate(-3deg);
+    }
+    50% {
+        transform: translateY(-8px) rotate(-1deg);
+    }
+}
+
+.polo-float-alt {
+    animation: polo-float-alt 8s ease-in-out infinite;
+}
+
+@keyframes polo-float-alt {
+    0%,
+    100% {
+        transform: translateY(0px) rotate(2.5deg);
+    }
+    50% {
+        transform: translateY(-7px) rotate(1deg);
+    }
+}
+
+@media (max-width: 900px) {
+    .polo-container {
+        width: min(1320px, calc(100% - 1.2rem));
+    }
+
+    .polo-btn-dark,
+    .polo-btn-light {
+        font-size: 0.96rem;
+    }
 }

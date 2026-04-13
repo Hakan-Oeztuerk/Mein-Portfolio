@@ -1,19 +1,16 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from './components/navbar.jsx';
-import About from './pages/About.jsx';
-import Project from './pages/Project.jsx';
-import Contact from './pages/Contact.jsx';
-import Footer from './components/Footer.jsx';
-import Lebenslauf from './pages/Certicate.jsx';
-
-
-
+import Navbar from "./components/navbar.jsx";
+import About from "./pages/About.jsx";
+import Project from "./pages/Project.jsx";
+import Contact from "./pages/Contact.jsx";
+import Footer from "./components/Footer.jsx";
+import Lebenslauf from "./pages/Certicate.jsx";
 
 export default function App() {
   return (
-    <div>
+    <div className="polo-page min-h-screen">
       <Navbar />
-      
+
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="/about" element={<About />} />

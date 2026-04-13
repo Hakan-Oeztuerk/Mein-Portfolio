@@ -1,72 +1,103 @@
 import TCProject from "../assets/TC-Project.png";
 import TCPrototyp from "../assets/TC-Prototyp.png";
 import TCCaseStudy from "../assets/TC-CaseStudy.png";
+import WissKickDashboard from "../assets/wisskick-dashboard.png";
+import WissKickNeueKarte from "../assets/wisskick-neue-karte.png";
+import WissKickMeineKarten from "../assets/wisskick-meine-karten.png";
+
+const projects = [
+    {
+        title: "TuningConnect",
+        summary: "Konzept, UX/UI und klickbarer Prototyp für ein fokussiertes Automotive-Produkt.",
+        role: "Produktkonzept, UX/UI, Prototyping",
+        stack: ["Figma", "Framer", "Design System", "UX Research"],
+        outcome: "Saubere User-Flows und validierter Feature-Fokus als Grundlage für technische Umsetzung.",
+        images: [TCProject, TCPrototyp, TCCaseStudy],
+        link: "https://www.behance.net/gallery/238838695/TuningConnect-Case-Study",
+    },
+    {
+        title: "WissKick",
+        summary: "Lernplattform mit Dashboard, Study-Mode und strukturierter Kartenverwaltung.",
+        role: "Fullstack Entwicklung",
+        stack: ["React", "TypeScript", "Express", "PostgreSQL", "Prisma"],
+        outcome: "Durchgängiger Workflow von Auth, Lernkarten und Dashboard mit klarer UI-Struktur.",
+        images: [WissKickDashboard, WissKickNeueKarte, WissKickMeineKarten],
+        link: "https://www.wisskick.com",
+    },
+];
 
 export default function ProjectCard() {
-  return (
-    <div className="outline  p-6 rounded-2xl shadow-xl w-full max-w-3xl">
+    return (
+        <section className="px-3 pb-20">
+            <div className="polo-container space-y-6">
+                <div className="mx-auto max-w-4xl text-center">
+                    <p className="text-sm font-semibold uppercase tracking-[0.14em] text-white/55">Projekte</p>
+                    <h1 className="mt-2 text-4xl font-semibold text-white md:text-6xl">Ausgewählte Case Studies</h1>
+                    <p className="polo-muted mt-4 text-lg md:text-xl">
+                        Relevante Projektarbeiten mit Fokus auf technische Umsetzung, Produktdenken und saubere Architektur.
+                    </p>
+                </div>
 
-      <h2 className="text-4xl font-extrabold text-white mb-2">
-        Projekte, die funktionieren.
-      </h2>
+                <div className="space-y-8">
+                    {projects.map((project) => (
+                        <article key={project.title} className="polo-panel p-6 md:p-8">
+                            <div className="flex flex-wrap items-end justify-between gap-4">
+                                <div>
+                                    <h2 className="text-2xl font-semibold text-white md:text-3xl">{project.title}</h2>
+                                    <p className="polo-muted mt-2 max-w-2xl text-sm md:text-lg">{project.summary}</p>
+                                </div>
 
-      <p className="text-gray-400 text-lg mb-8">
-        Erlebe Interfaces, Webanwendungen und digitale Produkte,
-        die intuitiv, klar und nutzerfreundlich gestaltet sind.
-      </p>
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="polo-btn-dark"
+                                >
+                                    Case Study öffnen
+                                    <span aria-hidden>➜</span>
+                                </a>
+                            </div>
 
-      <div className="grid grid-cols-3 gap-4 mb-8">
-        <a href="https://www.figma.com/design/S4eH8P5UO7O499dKjGezo1/Batch_001_Block_3_Name-Hakan-%C3%96zt%C3%BCrk-UX_Design_and_Produktentwicklung_c7c361b348?node-id=2003-60" target="_blank" rel="noopener noreferrer" className="block">
-          <img src={TCProject} alt="TuningConnect" className="rounded-xl shadow-lg w-full" />
-        </a>
-        <a href="https://www.figma.com/design/S4eH8P5UO7O499dKjGezo1/Batch_001_Block_3_Name-Hakan-%C3%96zt%C3%BCrk-UX_Design_and_Produktentwicklung_c7c361b348?node-id=2003-60" target="_blank" rel="noopener noreferrer" className="block">
-          <img src={TCPrototyp} alt="Projektbild 2" className="rounded-xl shadow-lg w-full" />
-        </a>
-        <a href="https://www.figma.com/design/S4eH8P5UO7O499dKjGezo1/Batch_001_Block_3_Name-Hakan-%C3%96zt%C3%BCrk-UX_Design_and_Produktentwicklung_c7c361b348?node-id=2003-60" target="_blank" rel="noopener noreferrer" className="block">
-          <img src={TCCaseStudy} alt="Projektbild 3" className="rounded-xl shadow-lg w-full" />
-        </a>
-      </div>
+                            <div className="mt-5 grid gap-4 md:grid-cols-3">
+                                <div className="rounded-2xl border border-white/12 bg-white/[0.03] p-4">
+                                    <p className="text-xs uppercase tracking-[0.12em] text-white/60">Rolle</p>
+                                    <p className="mt-2 text-sm text-white/90 md:text-base">{project.role}</p>
+                                </div>
 
-      <div className="flex gap-4 mt-6">
+                                <div className="rounded-2xl border border-white/12 bg-white/[0.03] p-4 md:col-span-2">
+                                    <p className="text-xs uppercase tracking-[0.12em] text-white/60">Stack</p>
+                                    <div className="mt-2 flex flex-wrap gap-2">
+                                        {project.stack.map((item) => (
+                                            <span key={item} className="polo-chip px-3 py-1 text-xs text-white/85 md:text-sm">
+                                                {item}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
 
-        <a
-          href="https://github.com/Hakan-Oeztuerk/Mein-Portfolio"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700"
-        >
-          GitHub
-        </a>
+                            <div className="mt-4 rounded-2xl border border-white/12 bg-white/[0.03] p-4">
+                                <p className="text-xs uppercase tracking-[0.12em] text-white/60">Ergebnis</p>
+                                <p className="mt-2 text-sm text-white/90 md:text-base">{project.outcome}</p>
+                            </div>
 
-        <a
-          href="https://www.framer.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700"
-        >
-          Framer
-        </a>
-
-        <a
-          href="https://www.behance.net/gallery/238838695/TuningConnect-Case-Study"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700"
-        >
-          Behance
-        </a>
-
-        <a
-          href="https://www.figma.com/design/S4eH8P5UO7O499dKjGezo1/Batch_001_Block_3_Name-Hakan-%C3%96zt%C3%BCrk-UX_Design_and_Produktentwicklung_c7c361b348?node-id=2003-60"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700"
-        >
-          Figma
-        </a>
-
-      </div>
-    </div>
-  );
+                            <div className="mt-7 grid gap-4 md:grid-cols-3">
+                                {project.images.map((image, index) => (
+                                    <a
+                                        key={`${project.title}-${index}`}
+                                        href={project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="polo-grid-card polo-grid-card-contain h-56 md:h-64"
+                                    >
+                                        <img src={image} alt={`${project.title} ${index + 1}`} />
+                                    </a>
+                                ))}
+                            </div>
+                        </article>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
 }
-

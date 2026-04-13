@@ -1,28 +1,33 @@
-import { Link } from "react-router-dom";
-import DarkModeToggle from "./DarkModeToggle";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
-    return (
-        <nav className="bg-black border-gray-800 text-white p-4 flex items-center">
-            <div>
-                <h1 className="text-xl ml-40 font-bold text-cyan-400">HÖ</h1>
-            </div>
+    const location = useLocation();
+    const isHome = location.pathname === "/" || location.pathname === "/about";
 
-            <ul className="flex justify-center items-center space-x-8 ml-auto mr-40 text-lg">
-                <li>
-                    <Link to="/about" className="hover:text-cyan-400">Über mich</Link>
-                </li>
-                <li>
-                    <Link to="/project" className="hover:text-cyan-400">Projekte</Link>
-                </li>
-                <li>
-                    <Link to="/contact" className="hover:text-cyan-400">Kontakt</Link>
-                </li>
-                <li>
-                    <Link to="/lebenslauf" className="hover:text-cyan-400">Zerifikat</Link>
-                </li>
-                <DarkModeToggle />
-            </ul>
-        </nav>
+    return (
+        <header className="sticky top-4 z-50 px-3">
+            <div className="polo-container">
+                <div className="polo-nav-shell flex items-center justify-between gap-4 px-4 py-3 md:px-6">
+                    <Link to="/" className="text-2xl font-bold tracking-tight text-white/95">
+                        Hakan Öztürk
+                    </Link>
+
+                    <nav className="hidden items-center gap-8 text-lg font-medium text-white/72 md:flex">
+                        {isHome ? (
+                            <a href="#services" className="hover:text-white">Kompetenzen</a>
+                        ) : (
+                            <Link to="/#services" className="hover:text-white">Kompetenzen</Link>
+                        )}
+
+                        <Link to="/project" className="hover:text-white">Projekte</Link>
+
+                        <Link to="/lebenslauf" className="hover:text-white">Lebenslauf</Link>
+
+                        <Link to="/contact" className="hover:text-white">Kontakt</Link>
+                    </nav>
+
+                </div>
+            </div>
+        </header>
     );
 }

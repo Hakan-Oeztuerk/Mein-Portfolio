@@ -1,14 +1,19 @@
 export default function TextAreaField({ label, register, error }) {
     return (
         <div>
-            <label className="font-semibold">{label}</label>
+            <label className="mb-2 block text-xs font-semibold uppercase tracking-[0.12em] text-white/65">
+                {label}
+            </label>
             <textarea
                 {...register}
-                rows="4"
-                className={`border p-3 mt-1 rounded-xl w-full focus:border-cyan-600 outline-none ${error ? "border-red-500 animate-pulse" : ""
-                    }`}
+                rows="5"
+                className={`w-full rounded-2xl border bg-white/[0.03] px-4 py-3 text-white outline-none transition ${
+                    error
+                        ? "border-red-500/70 focus:border-red-400"
+                        : "border-white/15 focus:border-white/35"
+                }`}
             />
-            {error && <p className="text-red-600 text-sm mt-1">{error.message}</p>}
+            {error && <p className="mt-1 text-sm text-red-400">{error.message}</p>}
         </div>
     );
 }
