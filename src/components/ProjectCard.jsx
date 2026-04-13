@@ -14,6 +14,7 @@ const projects = [
         outcome: "Saubere User-Flows und validierter Feature-Fokus als Grundlage für technische Umsetzung.",
         images: [TCProject, TCPrototyp, TCCaseStudy],
         link: "https://www.behance.net/gallery/238838695/TuningConnect-Case-Study",
+        ctaLabel: "Case Study öffnen",
     },
     {
         title: "WissKick",
@@ -23,6 +24,7 @@ const projects = [
         outcome: "Durchgängiger Workflow von Auth, Lernkarten und Dashboard mit klarer UI-Struktur.",
         images: [WissKickDashboard, WissKickNeueKarte, WissKickMeineKarten],
         link: "https://www.wisskick.com",
+        ctaLabel: "Webapp öffnen",
     },
 ];
 
@@ -53,7 +55,7 @@ export default function ProjectCard() {
                                     rel="noopener noreferrer"
                                     className="polo-btn-dark"
                                 >
-                                    Case Study öffnen
+                                    {project.ctaLabel}
                                     <span aria-hidden>➜</span>
                                 </a>
                             </div>
