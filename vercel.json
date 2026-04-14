@@ -1,17 +1,4 @@
 {
   "installCommand": "npm ci",
-  "buildCommand": "npm run build",
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "mein-portfolio-gamma.vercel.app"
-        }
-      ],
-      "destination": "https://portfolio-hakan-ozturk.vercel.app/:path*",
-      "permanent": true
-    }
-  ]
+  "buildCommand": "npm run build"
 }
